@@ -1,4 +1,7 @@
-import { loadLevel } from './logic/loadLevel';
+import { loadAssets } from './logic/loadAssets';
+import { loadTiledMap } from './logic/loadTiledMap';
+import { loadMobs } from './logic/loadMobs';
+
 import { ACTION } from './consts';
 
 /**
@@ -8,14 +11,17 @@ import { ACTION } from './consts';
 */
 export function gameLogic(state, action) {
   console.log('action', action);
+
   switch (action.type) {
     case ACTION.INIT:
-      loadLevel(state, action);
+      loadAssets(state, action);
+      loadTiledMap(state, action);
+      loadMobs(state, action);
       break;
     default:
       console.log('unknown action', action);
+      break;
   }
 
-  console.log('updated state', state);
   return state;
 }

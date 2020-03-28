@@ -25,7 +25,7 @@ PIXI.Loader.shared
     dispatch({
       type: ACTION.INIT,
       resources,
-      level,
+      tiledMap: level,
       stage: app.stage,
     });
   });
