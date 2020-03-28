@@ -1,25 +1,31 @@
 import * as PIXI from 'pixi.js';
 
-const loader = PIXI.Loader.shared;
+import { ACTION } from './consts';
+import { dispatch } from './dispatch';
+
+// Starting Level
+import level from './assets/level_2.json';
+
+const WIDTH = 800;
+const HEIGHT = 600;
+const RESOLUTION = 1;
 
 //Create a Pixi Application
-let app = new PIXI.Application({width: 256, height: 256, resolution: 2});
-window.game = app;
-
-
-loader.add('tilesheet', 'assets/colored.json')
-  .load((loader, resources) => {
-    console.log('resources', resources);
-
-    const tiles = resources.tilesheet.spritesheet;
-    console.log('tiles', tiles);
-    const sprite = new PIXI.Sprite(tiles.textures['4']);
-    sprite.x = 16;
-    sprite.y = 16;
-    // sprite.scale = 2;
-    app.stage.addChild(sprite);
-  });
-
-
+const app = window.app = new PIXI.Application({width: WIDTH, height: HEIGHT, resolution: RESOLUTION});
 //Add the canvas that Pixi automatically created for you to the HTML document
-document.body.appendChild(app.view);
+window.elRoot.appendChild(app.view);
+
+
+// Load our assets
+PIXI.Loader.shared
+  .add('tilesheet', 'assets/colored.json')
+  .load((loader, resources) => {
+    // Once all the async resources are loaded,
+    // dispatch the init action to start the game.
+    dispatch({
+      type: ACTION.INIT,
+      resources,
+      level,
+      stage: app.stage,
+    });
+  });
