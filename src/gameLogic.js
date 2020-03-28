@@ -1,8 +1,9 @@
 import { loadAssets } from './logic/loadAssets';
-import { loadTiledMap } from './logic/loadTiledMap';
 import { loadMobs } from './logic/loadMobs';
+import { loadTiledMap } from './logic/loadTiledMap';
+import { movePlayer } from './logic/movePlayer';
 
-import { ACTION } from './consts';
+import { ACTION } from './consts/action';
 
 /**
  * Logic for the game.
@@ -17,6 +18,12 @@ export function gameLogic(state, action) {
       loadAssets(state, action);
       loadTiledMap(state, action);
       loadMobs(state, action);
+      break;
+    case ACTION.MOVE_NORTH:
+    case ACTION.MOVE_SOUTH:
+    case ACTION.MOVE_EAST:
+    case ACTION.MOVE_WEST:
+      movePlayer(state, action);
       break;
     default:
       console.log('unknown action', action);

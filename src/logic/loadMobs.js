@@ -3,7 +3,7 @@ import * as PIXI from 'pixi.js';
 import { createContainer } from '../utils/createContainer';
 import { createSpriteFromTileID } from '../utils/createSpriteFromTileID';
 import { getRandomMob } from '../utils/getRandomMob';
-import { LAYER, EVENT_TYPE } from '../consts/tiledMap';
+import { LAYER, EVENT_TYPE, EVENT_NAME } from '../consts/tiledMap';
 
 /**
  * Creates sprites for the moveable objects.
@@ -28,6 +28,10 @@ export function loadMobs(state, {stage, resources}) {
     const sprite = createSpriteFromTileID(state, mobMeta.tileID);
     sprite.x = x;
     sprite.y = y;
+    sprite.name = name;
     state.mobLayer.addChild(sprite);
   });
+
+  // Save a refrence to the player
+  state.player = state.mobLayer.getChildByName(EVENT_NAME.PLAYER);
 }

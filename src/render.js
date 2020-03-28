@@ -1,6 +1,6 @@
 
 export function render(state) {
-  console.log('Render everything!');
+  // console.log('Render everything!');
 
     // const tiles = resources.tilesheet.spritesheet;
     // console.log('tiles', tiles);

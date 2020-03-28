@@ -44,7 +44,7 @@
 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,170,3221225642,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
 </data>
  </layer>
- <objectgroup id="2" name="events" visible="0">
+ <objectgroup id="2" name="events">
   <object id="2" name="player" type="spawn" x="272" y="256" width="16" height="16"/>
   <object id="3" name="survivor" type="spawn" x="80" y="48" width="16" height="16"/>
  </objectgroup>

@@ -2,6 +2,7 @@ import * as PIXI from 'pixi.js';
 
 import { ACTION } from './consts/action';
 import { dispatch } from './dispatch';
+import { startWASD } from './playerControls';
 
 // Starting Level
 import level from './assets/level_2.json';
@@ -28,4 +29,6 @@ PIXI.Loader.shared
       tiledMap: level,
       app,
     });
+    // Start listening for player input
+    startWASD();
   });
