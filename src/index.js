@@ -1,6 +1,6 @@
 import * as PIXI from 'pixi.js';
 
-import { ACTION } from './consts';
+import { ACTION } from './consts/action';
 import { dispatch } from './dispatch';
 
 // Starting Level
@@ -26,6 +26,6 @@ PIXI.Loader.shared
       type: ACTION.INIT,
       resources,
       tiledMap: level,
-      stage: app.stage,
+      app,
     });
   });

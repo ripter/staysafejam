@@ -1,8 +1,7 @@
-import { createState } from './createState';
 import { gameLogic } from './gameLogic';
 import { render } from './render';
 
-const state = createState();
+const state = {};
 // put state on the window for easy debugging.
 window.gameState = state;
 
