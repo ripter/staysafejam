@@ -10,29 +10,30 @@ import { LAYER } from '../consts/tiledMap';
 */
 export function loadTiledMap(state, {tiledMap}) {
   const { stage, resources } = state;
-  const { tileheight: tileHeight, tilewidth: tileWidth } = tiledMap;
   const tiles = resources.tilesheet;
 
-  console.log('tiledMap', tiledMap);
   //
   // Save shortcuts to requred data.
   state.level = tiledMap.layers;
-  state.tileWidth = tileWidth;
-  state.tileHeight = tileHeight;
-  // find the background tileset layer.
-  const bgLayer = state.level.find(i => i.type === 'tilelayer' && i.name === LAYER.BACKGROUND);
-  const { width, height } = bgLayer;
+  state.tileWidth = tiledMap.tilewidth;
+  state.tileHeight = tiledMap.tileheight;
 
   //
-  // Create a container to hold the background sprites.
-  createContainer(state, 'backgroundLayer');
+  // Load all the tile layers as sprites in containers
+  Object.values(LAYER).forEach(layerName => {
+    const layer = state.level.find(i => i.type === 'tilelayer' && i.name === layerName);
+    if (!layer) { return; } // ignore objectgroups
+    const { width, height } = layer;
 
-  //
-  // Create a sprite in the backgroundLayer for each tile in the level data.
-  bgLayer.data.forEach((tileID, index) => {
-    const sprite = createSpriteFromTileID(state, tileID);
-    sprite.y = (0|index / width) * tileHeight;
-    sprite.x = (0|index % width) * tileWidth;
-    state.backgroundLayer.addChild(sprite);
+    // Create a container to hold the background sprites.
+    createContainer(state, layerName);
+
+    // Create a sprite for each tile.
+    layer.data.forEach((tileID, index) => {
+      const sprite = createSpriteFromTileID(state, tileID);
+      sprite.y = (0|index / width) * state.tileHeight;
+      sprite.x = (0|index % width) * state.tileWidth;
+      state[layerName].addChild(sprite);
+    });
   });
 }

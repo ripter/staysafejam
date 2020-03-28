@@ -9,7 +9,7 @@ import { LAYER, EVENT_TYPE, EVENT_NAME } from '../consts/tiledMap';
  * Creates sprites for the moveable objects.
  * Mutates state
 */
-export function loadMobs(state, {stage, resources}) {
+export function loadEvents(state, {stage, resources}) {
   const tiles = resources.tilesheet;
   // get the events layer, it holds the spawn points.
   const { objects } = state.level.find(i => i.type === 'objectgroup' && i.name === LAYER.EVENTS);

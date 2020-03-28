@@ -1,5 +1,5 @@
 import { loadAssets } from './logic/loadAssets';
-import { loadMobs } from './logic/loadMobs';
+import { loadEvents } from './logic/loadEvents';
 import { loadTiledMap } from './logic/loadTiledMap';
 import { movePlayer } from './logic/movePlayer';
 
@@ -17,7 +17,7 @@ export function gameLogic(state, action) {
     case ACTION.INIT:
       loadAssets(state, action);
       loadTiledMap(state, action);
-      loadMobs(state, action);
+      loadEvents(state, action);
       break;
     case ACTION.MOVE_NORTH:
     case ACTION.MOVE_SOUTH:
