@@ -6,8 +6,8 @@ import { dispatch } from './dispatch';
 // Starting Level
 import level from './assets/level_2.json';
 
-const WIDTH = 800;
-const HEIGHT = 600;
+const WIDTH = 1024;
+const HEIGHT = 576;
 const RESOLUTION = 1;
 
 //Create a Pixi Application

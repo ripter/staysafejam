@@ -13,6 +13,7 @@ export function loadTiledMap(state, {tiledMap}) {
   const { tileheight: tileHeight, tilewidth: tileWidth } = tiledMap;
   const tiles = resources.tilesheet;
 
+  console.log('tiledMap', tiledMap);
   //
   // Save shortcuts to requred data.
   state.level = tiledMap.layers;
