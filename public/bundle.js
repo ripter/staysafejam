@@ -739,6 +739,65 @@ eval("module.exports = function(module) {\n\tif (!module.webpackPolyfill) {\n\t\
 
 /***/ }),
 
+/***/ "./src/assets/level_2.json":
+/*!*********************************!*\
+  !*** ./src/assets/level_2.json ***!
+  \*********************************/
+/*! exports provided: compressionlevel, editorsettings, height, infinite, layers, nextlayerid, nextobjectid, orientation, renderorder, tiledversion, tileheight, tilesets, tilewidth, type, version, width, default */
+/***/ (function(module) {
+
+eval("module.exports = JSON.parse(\"{\\\"compressionlevel\\\":-1,\\\"editorsettings\\\":{\\\"export\\\":{\\\"format\\\":\\\"json\\\",\\\"target\\\":\\\"level_2.json\\\"}},\\\"height\\\":28,\\\"infinite\\\":false,\\\"layers\\\":[{\\\"data\\\":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,433,434,434,434,434,434,434,435,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,465,1,1,1,1,1,1,467,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,465,1,1,1,1,1,1,467,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,465,1,1,1,1,1,1,467,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,465,1,1,1,1,1,1,467,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,497,498,498,498,498,498,498,499,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,555,555,555,361,555,555,555,555,33,33,33,33,33,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,41,1,1,33,1,1,1,1,1,33,1,1,1,1,1,1,1,33,33,33,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,41,1,33,1,1,1,1,1,1,1,33,1,1,1,1,1,33,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,41,1,33,1,1,1,1,1,1,1,1,33,1,1,1,33,33,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,41,33,1,1,1,1,1,1,1,1,1,1,33,33,33,33,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,41,33,1,1,1,1,1,1,1,1,1,1,1,33,33,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,241,41,33,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,43,44,44,1,1,1,1,33,1,1,1,1,1,1,1,1,1,1,656,1,1,1,1,33,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,41,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,688,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,41,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,720,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,41,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,752,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,41,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,141,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,41,1,1,1,1,1,1,1,1,33,1,1,1,1,1,33,1,1,1,1,1,1,1,1,1,1,1,1,1,171,172,172,172,172,172,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,41,33,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,170,169,169,169,169,169,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,41,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,170,169,169,169,169,169,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,41,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,170,169,169,169,169,169,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,41,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,170,169,169,169,169,169,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,97,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,97,1,1,1,170,169,169,169,169,169,1,1,1,1,1,1,1,1,1,1,1,99,99,99,99,101,99,99,99,1,1,1,1,1,1,1,1,1,1,1,1,1,1,99,99,99,99,99,99,99,100,99,99,99,140,169,169,169,169,169,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,1,1,1,1,1,1,1,1,1,1,137,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,137,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],\\\"height\\\":28,\\\"id\\\":1,\\\"name\\\":\\\"Tile Layer 1\\\",\\\"opacity\\\":1,\\\"type\\\":\\\"tilelayer\\\",\\\"visible\\\":true,\\\"width\\\":50,\\\"x\\\":0,\\\"y\\\":0}],\\\"nextlayerid\\\":2,\\\"nextobjectid\\\":1,\\\"orientation\\\":\\\"orthogonal\\\",\\\"renderorder\\\":\\\"right-down\\\",\\\"tiledversion\\\":\\\"1.3.3\\\",\\\"tileheight\\\":16,\\\"tilesets\\\":[{\\\"firstgid\\\":1,\\\"source\\\":\\\"colored.tsx\\\"}],\\\"tilewidth\\\":16,\\\"type\\\":\\\"map\\\",\\\"version\\\":1.2,\\\"width\\\":50}\");\n\n//# sourceURL=webpack:///./src/assets/level_2.json?");
+
+/***/ }),
+
+/***/ "./src/consts.js":
+/*!***********************!*\
+  !*** ./src/consts.js ***!
+  \***********************/
+/*! exports provided: ACTION */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"ACTION\", function() { return ACTION; });\nconst ACTION = {\n  INIT: 'INIT',\n};\n\n\n//# sourceURL=webpack:///./src/consts.js?");
+
+/***/ }),
+
+/***/ "./src/createState.js":
+/*!****************************!*\
+  !*** ./src/createState.js ***!
+  \****************************/
+/*! exports provided: createState */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"createState\", function() { return createState; });\n/* harmony import */ var pixi_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! pixi.js */ \"./node_modules/pixi.js/lib/pixi.es.js\");\n\n\n/**\n * Returns a new Game State.\n*/\nfunction createState() {\n  return {\n    stage: null,\n    level: null,\n    backgroundLayer: null,\n  };\n}\n\n\n//# sourceURL=webpack:///./src/createState.js?");
+
+/***/ }),
+
+/***/ "./src/dispatch.js":
+/*!*************************!*\
+  !*** ./src/dispatch.js ***!
+  \*************************/
+/*! exports provided: dispatch */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"dispatch\", function() { return dispatch; });\n/* harmony import */ var _createState__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./createState */ \"./src/createState.js\");\n/* harmony import */ var _gameLogic__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./gameLogic */ \"./src/gameLogic.js\");\n/* harmony import */ var _render__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./render */ \"./src/render.js\");\n\n\n\n\nlet state = Object(_createState__WEBPACK_IMPORTED_MODULE_0__[\"createState\"])();\n\nfunction dispatch(action) {\n  console.group('Dispatch');\n  // Update the state\n  Object(_gameLogic__WEBPACK_IMPORTED_MODULE_1__[\"gameLogic\"])(state, action);\n  // re-render\n  Object(_render__WEBPACK_IMPORTED_MODULE_2__[\"render\"])(state);\n  console.groupEnd();\n}\n\n\n//# sourceURL=webpack:///./src/dispatch.js?");
+
+/***/ }),
+
+/***/ "./src/gameLogic.js":
+/*!**************************!*\
+  !*** ./src/gameLogic.js ***!
+  \**************************/
+/*! exports provided: gameLogic */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"gameLogic\", function() { return gameLogic; });\n/* harmony import */ var _logic_loadLevel__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./logic/loadLevel */ \"./src/logic/loadLevel.js\");\n/* harmony import */ var _consts__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./consts */ \"./src/consts.js\");\n\n\n\n/**\n * Logic for the game.\n * Reducer function that returns the updated state object.\n * This *does mutate* the state.\n*/\nfunction gameLogic(state, action) {\n  console.log('action', action);\n  switch (action.type) {\n    case _consts__WEBPACK_IMPORTED_MODULE_1__[\"ACTION\"].INIT:\n      Object(_logic_loadLevel__WEBPACK_IMPORTED_MODULE_0__[\"loadLevel\"])(state, action);\n      break;\n    default:\n      console.log('unknown action', action);\n  }\n\n  console.log('updated state', state);\n  return state;\n}\n\n\n//# sourceURL=webpack:///./src/gameLogic.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -747,7 +806,31 @@ eval("module.exports = function(module) {\n\tif (!module.webpackPolyfill) {\n\t\
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var pixi_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! pixi.js */ \"./node_modules/pixi.js/lib/pixi.es.js\");\n\n\nconst loader = pixi_js__WEBPACK_IMPORTED_MODULE_0__[\"Loader\"].shared;\n\n//Create a Pixi Application\nlet app = new pixi_js__WEBPACK_IMPORTED_MODULE_0__[\"Application\"]({width: 256, height: 256, resolution: 2});\nwindow.game = app;\n\n\nloader.add('tilesheet', 'assets/colored.json')\n  .load((loader, resources) => {\n    console.log('resources', resources);\n\n    const tiles = resources.tilesheet.spritesheet;\n    console.log('tiles', tiles);\n    const sprite = new pixi_js__WEBPACK_IMPORTED_MODULE_0__[\"Sprite\"](tiles.textures['4']);\n    sprite.x = 16;\n    sprite.y = 16;\n    // sprite.scale = 2;\n    app.stage.addChild(sprite);\n  });\n\n\n//Add the canvas that Pixi automatically created for you to the HTML document\ndocument.body.appendChild(app.view);\n\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var pixi_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! pixi.js */ \"./node_modules/pixi.js/lib/pixi.es.js\");\n/* harmony import */ var _consts__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./consts */ \"./src/consts.js\");\n/* harmony import */ var _dispatch__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./dispatch */ \"./src/dispatch.js\");\n/* harmony import */ var _assets_level_2_json__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets/level_2.json */ \"./src/assets/level_2.json\");\nvar _assets_level_2_json__WEBPACK_IMPORTED_MODULE_3___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./assets/level_2.json */ \"./src/assets/level_2.json\", 1);\n\n\n\n\n\n// Starting Level\n\n\nconst WIDTH = 800;\nconst HEIGHT = 600;\nconst RESOLUTION = 1;\n\n//Create a Pixi Application\nconst app = window.app = new pixi_js__WEBPACK_IMPORTED_MODULE_0__[\"Application\"]({width: WIDTH, height: HEIGHT, resolution: RESOLUTION});\n//Add the canvas that Pixi automatically created for you to the HTML document\nwindow.elRoot.appendChild(app.view);\n\n\n// Load our assets\npixi_js__WEBPACK_IMPORTED_MODULE_0__[\"Loader\"].shared\n  .add('tilesheet', 'assets/colored.json')\n  .load((loader, resources) => {\n    // Once all the async resources are loaded,\n    // dispatch the init action to start the game.\n    Object(_dispatch__WEBPACK_IMPORTED_MODULE_2__[\"dispatch\"])({\n      type: _consts__WEBPACK_IMPORTED_MODULE_1__[\"ACTION\"].INIT,\n      resources,\n      level: _assets_level_2_json__WEBPACK_IMPORTED_MODULE_3__,\n      stage: app.stage,\n    });\n  });\n\n\n//# sourceURL=webpack:///./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/logic/loadLevel.js":
+/*!********************************!*\
+  !*** ./src/logic/loadLevel.js ***!
+  \********************************/
+/*! exports provided: loadLevel */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"loadLevel\", function() { return loadLevel; });\n/* harmony import */ var pixi_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! pixi.js */ \"./node_modules/pixi.js/lib/pixi.es.js\");\n\n\n/**\n * Loads the level, creating sprites as needed.\n*/\nfunction loadLevel(state, {stage, resources, level: levelMap}) {\n  const tiles = resources.tilesheet;\n  const level = levelMap.layers[0];\n  const { width, height } = level;\n\n  // Level data\n  state.level = level;\n  state.stage = stage;\n\n  // Create a container to hold the background.\n  state.backgroundLayer = new pixi_js__WEBPACK_IMPORTED_MODULE_0__[\"Container\"]();\n  stage.addChild(state.backgroundLayer);\n\n  console.log('textures', tiles.textures);\n  state.level.data.forEach((tileID, index) => {\n    console.log('tileID', tileID);\n    // tildID comes from Tiled, which uses a 1 based index, so we need ot -1 to get the real index.\n    const sprite = new pixi_js__WEBPACK_IMPORTED_MODULE_0__[\"Sprite\"](tiles.textures[tileID-1]);\n    sprite.y = (0|index / width) * 16;\n    sprite.x = (0|index % width) * 16;\n\n    state.backgroundLayer.addChild(sprite);\n  });\n\n\n}\n\n\n//# sourceURL=webpack:///./src/logic/loadLevel.js?");
+
+/***/ }),
+
+/***/ "./src/render.js":
+/*!***********************!*\
+  !*** ./src/render.js ***!
+  \***********************/
+/*! exports provided: render */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n\nfunction render(state) {\n  console.log('Render everything!');\n\n    // const tiles = resources.tilesheet.spritesheet;\n    // console.log('tiles', tiles);\n    // const sprite = new PIXI.Sprite(tiles.textures['4']);\n    // sprite.x = 16;\n    // sprite.y = 16;\n    // // sprite.scale = 2;\n    // app.stage.addChild(sprite);\n}\n\n\n//# sourceURL=webpack:///./src/render.js?");
 
 /***/ })
 

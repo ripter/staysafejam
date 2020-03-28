@@ -2,7 +2,9 @@ import { createState } from './createState';
 import { gameLogic } from './gameLogic';
 import { render } from './render';
 
-let state = createState();
+const state = createState();
+// put state on the window for easy debugging.
+window.gameState = state;
 
 export function dispatch(action) {
   console.group('Dispatch');
