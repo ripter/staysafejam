@@ -1,7 +1,9 @@
 import { gameLogic } from './gameLogic';
 import { render } from './render';
 
-const state = {};
+const state = {
+  solidary: 0,
+};
 // put state on the window for easy debugging.
 window.gameState = state;
 

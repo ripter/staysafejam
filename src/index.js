@@ -5,7 +5,7 @@ import { dispatch } from './dispatch';
 import { startWASD } from './playerControls';
 
 // Starting Level
-import level from './assets/level_2.json';
+import level from './assets/level_1.json';
 
 const WIDTH = 1024;
 const HEIGHT = 576;

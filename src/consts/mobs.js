@@ -1,7 +1,7 @@
 
 export const MOBS = [
   {
-    tileID: 25+1, //+1 because tiled.ID is index 1 base.
+    tileID: 59+1, //+1 because tiled.ID is index 1 base.
     names: ['player', 'humanoid', 'noHat'],
   },
   {

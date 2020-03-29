@@ -19,7 +19,7 @@ export function createDialogUI(state) {
   state.dialog.x = 16 * 7;
 
   //
-  // build the dialog out of sprites.
+  // build the dialog box out of sprites.
   for (let x=0; x < WIDTH; x++) {
     for (let y=0; y < HEIGHT; y++) {
       let tileID = 1; // filler
@@ -44,7 +44,7 @@ export function createDialogUI(state) {
   //
   // Add the Avatar
   const avatar = createSpriteFromTileID(state, 345);
-  avatar.x = 16;
+  avatar.x = 16 * 3;
   avatar.y = 16;
   avatar.scale.set(4);
   avatar.name = 'avatar';
@@ -53,7 +53,7 @@ export function createDialogUI(state) {
 
   //
   // Add The text
-  const message = new PIXI.Text('I love Xiaoyan.\nRose love me.', {
+  const message = new PIXI.Text('#StaySafeJam @ripter001 (Twitter)\nTheme: Solidary (March 2020)', {
     fontFamily : 'monospace',
     // fontFamily : 'Arial',
     fontSize: 24,
@@ -61,7 +61,7 @@ export function createDialogUI(state) {
     fill : 0xcfc6b8,
     align : 'left'
   });
-  message.x = 16 * 6;
+  message.x = 16 * 8;
   message.y = 16 * 1;
   message.name = 'message';
   state.dialog.addChild(message);

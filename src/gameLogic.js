@@ -4,6 +4,7 @@ import { loadTiledMap } from './logic/loadTiledMap';
 import { movePlayer } from './logic/movePlayer';
 import { createDialogUI } from './logic/createDialogUI';
 import { updateDialog } from './logic/updateDialog';
+import { createSolidaryUI } from './logic/createSolidaryUI';
 
 import { ACTION } from './consts/action';
 
@@ -24,6 +25,7 @@ export function gameLogic(state, action) {
       loadTiledMap(state, action);
       loadEvents(state, action);
       createDialogUI(state);
+      createSolidaryUI(state);
       break;
     case ACTION.MOVE_NORTH:
     case ACTION.MOVE_SOUTH:
