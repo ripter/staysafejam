@@ -1,11 +1,12 @@
 import { gameLogic } from './gameLogic';
-import { render } from './render';
+// import { render } from './render';
 import { FOCUS } from './consts/options';
 
 // default state.
 const state = {
   solidary: 0,
   focus: FOCUS.DIALOG,
+  currentPage: -1,
 };
 // put state on the window for easy debugging.
 window.gameState = state;

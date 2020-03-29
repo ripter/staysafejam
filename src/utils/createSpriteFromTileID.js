@@ -2,8 +2,8 @@ import * as PIXI from 'pixi.js';
 
 // values from: http://doc.mapeditor.org/en/latest/reference/tmx-map-format/#data
 const FLIPPED_HORIZONTALLY_FLAG = 0x80000000;
-const FLIPPED_VERTICALLY_FLAG   = 0x40000000;
-const FLIPPED_DIAGONALLY_FLAG   = 0x20000000;
+const FLIPPED_VERTICALLY_FLAG = 0x40000000;
+const FLIPPED_DIAGONALLY_FLAG = 0x20000000;
 
 // returns a new PIXI sprite from the tileID
 export function createSpriteFromTileID(state, tileID) {
@@ -16,7 +16,7 @@ export function createSpriteFromTileID(state, tileID) {
   // Extract the textureID from the tileID
   const textureID = tileID & ~(FLIPPED_HORIZONTALLY_FLAG | FLIPPED_VERTICALLY_FLAG | FLIPPED_DIAGONALLY_FLAG);
   // Tiled uses a 1 based index, so we need to -1 to get the spritesheet index.
-  const sprite = new PIXI.Sprite(tilesheet.textures[textureID-1]);
+  const sprite = new PIXI.Sprite(tilesheet.textures[textureID - 1]);
 
   // Flip as needed
   if (flipped.diagonally && flipped.vertically) {
@@ -34,7 +34,7 @@ export function createSpriteFromTileID(state, tileID) {
   }
   else if (flipped.vertically) {
     console.log('sprite', sprite);
-    throw new Error('ADD Feature')
+    throw new Error('ADD Feature');
   }
 
   // Keep a refrence to the tileID used to make this sprite.

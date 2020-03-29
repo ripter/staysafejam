@@ -3,7 +3,7 @@ import { dispatch } from './dispatch';
 
 export function startWASD() {
   // window.addEventListener('keydown', (evt) => {
-    // console.log('keydown', evt);
+  // console.log('keydown', evt);
   // });
   window.addEventListener('keyup', (evt) => {
     const { code } = evt;
@@ -40,6 +40,7 @@ export function startWASD() {
     dispatch({
       type,
       useBoost: evt.shiftKey,
+      fromUser: true,
     });
   });
 }

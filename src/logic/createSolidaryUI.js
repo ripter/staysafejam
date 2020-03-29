@@ -1,5 +1,3 @@
-import * as PIXI from 'pixi.js';
-
 import { createContainer } from '../utils/createContainer';
 import { createSpriteFromTileID } from '../utils/createSpriteFromTileID';
 
@@ -15,7 +13,7 @@ export function createSolidaryUI(state) {
   state.solidary.x = tileWidth * 8;
   state.solidary.y = tileHeight * 30;
 
-  for (let i=0; i < MAX; i++) {
+  for (let i = 0; i < MAX; i++) {
     const sprite = createSpriteFromTileID(state, 729);
     sprite.y = i * tileHeight;
     sprite.tint = TINT;

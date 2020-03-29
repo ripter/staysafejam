@@ -1,7 +1,5 @@
-import * as PIXI from 'pixi.js';
-
-import { createContainer } from '../utils/createContainer';
 import { arrayToGridSprite } from '../utils/convertPosition';
+import { createContainer } from '../utils/createContainer';
 import { createSpriteFromTileID } from '../utils/createSpriteFromTileID';
 import { LAYER } from '../consts/tiledMap';
 
@@ -9,10 +7,7 @@ import { LAYER } from '../consts/tiledMap';
  * Loads the level, creating sprites as needed.
  * Mutates state
 */
-export function loadTiledMap(state, {tiledMap}) {
-  const { stage, resources } = state;
-  const tiles = resources.tilesheet;
-
+export function loadTiledMap(state, { tiledMap }) {
   //
   // Save shortcuts to requred data.
   state.level = tiledMap.layers;
@@ -21,8 +16,8 @@ export function loadTiledMap(state, {tiledMap}) {
 
   //
   // Load all the tile layers as sprites in containers
-  Object.values(LAYER).forEach(layerName => {
-    const layer = state.level.find(i => i.type === 'tilelayer' && i.name === layerName);
+  Object.values(LAYER).forEach((layerName) => {
+    const layer = state.level.find((i) => i.type === 'tilelayer' && i.name === layerName);
     if (!layer) { return; } // ignore objectgroups
     const { width } = layer;
 
@@ -32,7 +27,7 @@ export function loadTiledMap(state, {tiledMap}) {
     // Create a sprite for each tile.
     layer.data.forEach((tileID, index) => {
       const sprite = createSpriteFromTileID(state, tileID);
-      const position = arrayToGridSprite(state, {index, width});
+      const position = arrayToGridSprite(state, { index, width });
       sprite.position.copyFrom(position);
       state[layerName].addChild(sprite);
     });

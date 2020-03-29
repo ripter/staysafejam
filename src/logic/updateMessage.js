@@ -1,6 +1,6 @@
 import { MESSAGES } from '../consts/dialog';
 
-export function updateMessage(state, {key, avatar}) {
+export function updateMessage(state, { key, avatar }) {
   const elText = state.dialog.getChildByName('message');
   const elAvatar = state.dialog.getChildByName('avatar');
   const elIconWait = state.dialog.getChildByName('iconWait');

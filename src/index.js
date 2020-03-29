@@ -11,9 +11,9 @@ const WIDTH = 1024;
 const HEIGHT = 576;
 const RESOLUTION = 1;
 
-//Create a Pixi Application
-const app = window.app = new PIXI.Application({width: WIDTH, height: HEIGHT, resolution: RESOLUTION});
-//Add the canvas that Pixi automatically created for you to the HTML document
+// Create a Pixi Application
+const app = window.app = new PIXI.Application({ width: WIDTH, height: HEIGHT, resolution: RESOLUTION });
+// Add the canvas that Pixi automatically created for you to the HTML document
 window.elRoot.appendChild(app.view);
 
 

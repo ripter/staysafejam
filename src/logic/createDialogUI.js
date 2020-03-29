@@ -20,18 +20,18 @@ export function createDialogUI(state) {
 
   //
   // build the dialog box out of sprites.
-  for (let x=0; x < WIDTH; x++) {
-    for (let y=0; y < HEIGHT; y++) {
+  for (let x = 0; x < WIDTH; x++) {
+    for (let y = 0; y < HEIGHT; y++) {
       let tileID = 1; // filler
       // if it's an edge, use the right edge piece
       if (x === 0 && y === 0) { tileID = 625; }
-      else if (x === 0 && y === HEIGHT-1) { tileID = 689}
-      else if (x === WIDTH-1 && y === 0) { tileID = 627; }
-      else if (x === WIDTH-1 && y === HEIGHT-1) { tileID = 691; }
+      else if (x === 0 && y === HEIGHT - 1) { tileID = 689; }
+      else if (x === WIDTH - 1 && y === 0) { tileID = 627; }
+      else if (x === WIDTH - 1 && y === HEIGHT - 1) { tileID = 691; }
       else if (y === 0) { tileID = 626; }
-      else if (y === HEIGHT-1) { tileID = 690; }
+      else if (y === HEIGHT - 1) { tileID = 690; }
       else if (x === 0) { tileID = 657; }
-      else if (x === WIDTH-1) { tileID = 659; }
+      else if (x === WIDTH - 1) { tileID = 659; }
       // create and add the sprite
       const sprite = createSpriteFromTileID(state, tileID);
       sprite.x = x * tileWidth;
@@ -54,11 +54,11 @@ export function createDialogUI(state) {
   //
   // Add The text
   const message = new PIXI.Text('#StaySafeJam @ripter001 (Twitter)\nTheme: Solidary (March 2020)', {
-    fontFamily : 'monospace',
+    fontFamily: 'monospace',
     fontSize: 24,
-    lineHeight: 24*1.4,
-    fill : 0xcfc6b8,
-    align : 'left'
+    lineHeight: 24 * 1.4,
+    fill: 0xcfc6b8,
+    align: 'left',
   });
   message.x = 16 * 8;
   message.y = 16 * 1;
@@ -74,5 +74,4 @@ export function createDialogUI(state) {
   iconWait.y = (tileHeight * HEIGHT) - (tileHeight * 2);
   avatar.tint = TINT;
   state.dialog.addChild(iconWait);
-
 }
