@@ -2,6 +2,7 @@ import { loadAssets } from './logic/loadAssets';
 import { loadEvents } from './logic/loadEvents';
 import { loadTiledMap } from './logic/loadTiledMap';
 import { movePlayer } from './logic/movePlayer';
+import { createDialogUI } from './logic/createDialogUI';
 
 import { ACTION } from './consts/action';
 
@@ -18,6 +19,7 @@ export function gameLogic(state, action) {
       loadAssets(state, action);
       loadTiledMap(state, action);
       loadEvents(state, action);
+      createDialogUI(state);
       break;
     case ACTION.MOVE_NORTH:
     case ACTION.MOVE_SOUTH:
