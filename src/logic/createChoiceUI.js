@@ -2,7 +2,7 @@ import * as PIXI from 'pixi.js';
 
 import { createContainer } from '../utils/createContainer';
 import { createSpriteFromTileID } from '../utils/createSpriteFromTileID';
-import { HEIGHT, WIDTH, TINT } from '../consts/dialog';
+import { WIDTH, TINT } from '../consts/dialog';
 
 export function createChoiceUI(state) {
   const { tileWidth, tileHeight } = state;

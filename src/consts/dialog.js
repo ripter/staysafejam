@@ -45,5 +45,5 @@ export const DIALOG = {
     pages: [
       '[You picked up the fancy ring.]',
     ],
-  }
+  },
 };

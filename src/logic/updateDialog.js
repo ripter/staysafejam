@@ -5,7 +5,7 @@ import { FOCUS } from '../consts/options';
 import { updateMessage } from './updateMessage';
 
 // Update the dialog UI which takes focus over the map.
-export function updateDialog(state, action) {
+export function updateDialog(state) {
   const { currentDialogKey } = state;
   const dialogMeta = DIALOG[currentDialogKey];
 

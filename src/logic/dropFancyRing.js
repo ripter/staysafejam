@@ -1,10 +1,10 @@
 import { LAYER } from '../consts/tiledMap';
 import { createSpriteFromTileID } from '../utils/createSpriteFromTileID';
 
-export function dropFancyRing(state, action) {
-  const { mobLayer, player, tileWidth, tileHeight } = state;
+export function dropFancyRing(state) {
+  const { mobLayer, player, tileWidth } = state;
   const layer = state.level.find((i) => i.type === 'objectgroup' && i.name === LAYER.EVENTS);
-  const eventObject = layer.objects.find(obj => obj.name === 'found_fancy_ring');
+  const eventObject = layer.objects.find((obj) => obj.name === 'found_fancy_ring');
 
   if (!eventObject.sprite) {
     // create the ring item

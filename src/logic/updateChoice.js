@@ -1,14 +1,15 @@
 import { ACTION } from '../consts/action';
 import { closeDialog } from './closeDialog';
 import { DIALOG } from '../consts/dialog';
-import { FOCUS } from '../consts/options';
 
 export function updateChoice(state, action) {
-  const { tileWidth, tileHeight, choiceLayer, currentDialogKey } = state;
+  const {
+    tileHeight, choiceLayer, currentDialogKey,
+  } = state;
   const dialogMeta = DIALOG[currentDialogKey];
   choiceLayer.visible = true;
 
-  switch(action.type) {
+  switch (action.type) {
     case ACTION.MOVE_NORTH:
       if (state.currentChoice > 0) {
         state.currentChoice -= 1;
@@ -39,10 +40,4 @@ export function updateChoice(state, action) {
   // Update the Icon position
   const elIcon = choiceLayer.getChildByName('icon');
   elIcon.y = tileHeight * state.currentChoice * 2;
-}
-
-function resetChoice(state) {
-  state.choiceLayer.visible = false;
-  state.focus = FOCUS.MAP;
-
 }

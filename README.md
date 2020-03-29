@@ -1,13 +1,9 @@
 # staysafejam
 Entry for the 2020 #StaySafeJam
 
+Unfinishd :(
 
-## Making Maps
+Move around with the WASD keys.
 
-* Layers:
-  * background
-  * events
-
-
-* events objectypes:
-  * spawn
+## How to run
+On the command line, run `make server`
