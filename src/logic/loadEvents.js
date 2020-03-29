@@ -15,10 +15,12 @@ export function loadEvents(state) {
 
   //
   // Put custom properties directly on the object.
-  objects.forEach((i) => {
-    if (!Array.isArray(i.properties)) { return; }
-    i.properties.forEach((p) => { i[p.name] = p.value; });
-    delete i.properties;
+  objects.forEach((obj) => {
+    if (!Array.isArray(obj.properties)) { return; }
+    obj.properties.forEach((prop) => {
+      obj[prop.name] = prop.value;
+    });
+    delete obj.properties;
   });
 
 

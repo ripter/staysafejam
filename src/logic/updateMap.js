@@ -17,7 +17,7 @@ export function updateMap(state, action) {
   const collision = getCollisionAt(state, nextPosition);
   const eventObject = getObjectEventAt(state, nextPosition);
 
-  if (collision.tileID === 0) {
+  if (collision.tileID === 0 && (!eventObject || !eventObject.doesCollide)) {
     movePlayer(state, nextPosition);
   }
 
