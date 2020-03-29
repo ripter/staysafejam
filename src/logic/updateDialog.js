@@ -1,24 +1,11 @@
-import { MESSAGES } from '../consts/dialog';
+import { FOCUS } from '../consts/options';
+import { ACTION } from '../consts/action';
+import { updateMessage } from './updateMessage';
 
+// Update the dialog UI which takes focus over the map.
+export function updateDialog(state, action) {
 
-// Updates the Dialog with a new message.
-export function updateDialog(state, {key, avatar}) {
-  if (!state.dialog) { return; }
-  const message = MESSAGES[key];
-  const elText = state.dialog.getChildByName('message');
-  const elAvatar = state.dialog.getChildByName('avatar');
-  let textureAvatar;
-
-  if (!key) {
-    elAvatar.visible = false;
-    elText.visible = false;
-  }
-  else {
-    textureAvatar = state.resources.tilesheet.textures[avatar];
-    elAvatar.texture = textureAvatar;
-    elText.text = message;
-    elAvatar.visible = true;
-    elText.visible = true;
-  }
-
+  // clear the message and switch focus back to the map
+  updateMessage(state, {key: null});
+  state.focus = FOCUS.MAP;
 }

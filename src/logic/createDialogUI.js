@@ -55,7 +55,6 @@ export function createDialogUI(state) {
   // Add The text
   const message = new PIXI.Text('#StaySafeJam @ripter001 (Twitter)\nTheme: Solidary (March 2020)', {
     fontFamily : 'monospace',
-    // fontFamily : 'Arial',
     fontSize: 24,
     lineHeight: 24*1.4,
     fill : 0xcfc6b8,
@@ -65,4 +64,15 @@ export function createDialogUI(state) {
   message.y = 16 * 1;
   message.name = 'message';
   state.dialog.addChild(message);
+
+
+  //
+  // Add the waiting for user input icon.
+  const iconWait = createSpriteFromTileID(state, 512);
+  iconWait.name = 'iconWait';
+  iconWait.x = (tileWidth * WIDTH) - (tileWidth * 2);
+  iconWait.y = (tileHeight * HEIGHT) - (tileHeight * 2);
+  avatar.tint = TINT;
+  state.dialog.addChild(iconWait);
+
 }

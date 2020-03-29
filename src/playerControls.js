@@ -26,9 +26,17 @@ export function startWASD() {
       case 'KeyD':
         type = ACTION.MOVE_EAST;
         break;
+      case 'Space':
+      case 'Enter':
+        type = ACTION.CONFIRM;
+        break;
+      case 'Escape':
+        type = ACTION.CANCEL;
+        break;
       default:
-        // ignore
+        type = ACTION.ANY_KEY;
     }
+
     dispatch({
       type,
       useBoost: evt.shiftKey,
