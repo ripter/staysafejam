@@ -1,6 +1,7 @@
 import * as PIXI from 'pixi.js';
 
 import { createContainer } from '../utils/createContainer';
+import { arrayToGridSprite } from '../utils/convertPosition';
 import { createSpriteFromTileID } from '../utils/createSpriteFromTileID';
 import { LAYER } from '../consts/tiledMap';
 
@@ -23,7 +24,7 @@ export function loadTiledMap(state, {tiledMap}) {
   Object.values(LAYER).forEach(layerName => {
     const layer = state.level.find(i => i.type === 'tilelayer' && i.name === layerName);
     if (!layer) { return; } // ignore objectgroups
-    const { width, height } = layer;
+    const { width } = layer;
 
     // Create a container to hold the background sprites.
     createContainer(state, layerName);
@@ -31,8 +32,8 @@ export function loadTiledMap(state, {tiledMap}) {
     // Create a sprite for each tile.
     layer.data.forEach((tileID, index) => {
       const sprite = createSpriteFromTileID(state, tileID);
-      sprite.y = (0|index / width) * state.tileHeight;
-      sprite.x = (0|index % width) * state.tileWidth;
+      const position = arrayToGridSprite(state, {index, width});
+      sprite.position.copyFrom(position);
       state[layerName].addChild(sprite);
     });
   });

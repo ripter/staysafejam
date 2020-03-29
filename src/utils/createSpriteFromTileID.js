@@ -37,6 +37,10 @@ export function createSpriteFromTileID(state, tileID) {
     throw new Error('ADD Feature')
   }
 
+  // Keep a refrence to the tileID used to make this sprite.
+  sprite.data = {
+    tileID,
+  };
 
   return sprite;
 }
