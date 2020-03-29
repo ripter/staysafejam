@@ -1,5 +1,4 @@
 import { gameLogic } from './gameLogic';
-// import { render } from './render';
 import { FOCUS } from './consts/options';
 
 // default state.
@@ -10,15 +9,23 @@ const state = {
   currentPage: -1,
   currentDialogKey: null,
   currentAvatar: null,
+  currentChoice: 0,
+  pendingActions: [],
 };
 // put state on the window for easy debugging.
 window.gameState = state;
 
 export function dispatch(action) {
-  // console.group('Dispatch');
+  console.group('Dispatch');
+  console.log('action', action);
+  console.groupEnd();
+
   // Update the state
   gameLogic(state, action);
-  // re-render
-  // render(state);
-  // console.groupEnd();
+
+  // If we have any pending actions, process them in order.
+  if (state.pendingActions.length > 0) {
+    const nextAction = state.pendingActions.shift();
+    dispatch(nextAction);
+  }
 }

@@ -1,3 +1,9 @@
+// import { ACTION } from './action';
+
+
+export const WIDTH = 50;
+export const HEIGHT = 6;
+export const TINT = 0xAAAAAA;
 
 export const DIALOG = {
   // sign_1: 'Up ahead, The Castle.\nBehind, Death Forest',
@@ -31,5 +37,7 @@ export const DIALOG = {
       'Is that the Royal Crest?',
       'Should I keep it?',
     ],
+    onConfirm: 'PICKUP_FANCY_RING',
+    onCancel: 'DROP_FANCY_RING',
   },
 };

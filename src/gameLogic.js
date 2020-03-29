@@ -1,8 +1,10 @@
+import { createChoiceUI } from './logic/createChoiceUI';
 import { createDialogUI } from './logic/createDialogUI';
 import { createSolidaryUI } from './logic/createSolidaryUI';
 import { loadAssets } from './logic/loadAssets';
 import { loadEvents } from './logic/loadEvents';
 import { loadTiledMap } from './logic/loadTiledMap';
+import { updateChoice } from './logic/updateChoice';
 import { updateDialog } from './logic/updateDialog';
 import { updateMap } from './logic/updateMap';
 
@@ -24,6 +26,7 @@ export function gameLogic(state, action) {
       loadEvents(state, action);
       createDialogUI(state);
       createSolidaryUI(state);
+      createChoiceUI(state);
       break;
     case ACTION.CONFIRM:
     case ACTION.CANCEL:
@@ -33,6 +36,9 @@ export function gameLogic(state, action) {
     case ACTION.MOVE_WEST:
       if (state.focus === FOCUS.DIALOG) {
         updateDialog(state, action);
+      }
+      else if (state.focus === FOCUS.CHOICE) {
+        updateChoice(state, action);
       }
       else {
         updateMap(state, action);

@@ -2,17 +2,13 @@ import * as PIXI from 'pixi.js';
 
 import { createContainer } from '../utils/createContainer';
 import { createSpriteFromTileID } from '../utils/createSpriteFromTileID';
-
-const WIDTH = 50;
-const HEIGHT = 6;
-const TINT = 0xAAAAAA;
+import { HEIGHT, WIDTH, TINT } from '../consts/dialog';
 
 
 // Creates a dialog container.
 export function createDialogUI(state) {
   const { tileWidth, tileHeight } = state;
   createContainer(state, 'dialog');
-
   //
   // Position the dialog near the bottom center.
   state.dialog.y = 576 - (16 * HEIGHT) - 16;
