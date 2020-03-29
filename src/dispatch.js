@@ -6,7 +6,10 @@ import { FOCUS } from './consts/options';
 const state = {
   solidary: 0,
   focus: FOCUS.DIALOG,
+  /* Dialog State */
   currentPage: -1,
+  currentDialogKey: null,
+  currentAvatar: null,
 };
 // put state on the window for easy debugging.
 window.gameState = state;

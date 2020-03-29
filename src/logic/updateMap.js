@@ -1,4 +1,5 @@
 import { movePlayer } from './movePlayer';
+import { triggerEvent } from './triggerEvent';
 import { getVelocity } from '../utils/getVelocity';
 import { getObjectEventAt } from '../utils/getObjectEventAt';
 import { getCollisionAt } from '../utils/getCollisionAt';
@@ -17,12 +18,13 @@ export function updateMap(state, action) {
   const collision = getCollisionAt(state, nextPosition);
   const eventObject = getObjectEventAt(state, nextPosition);
 
+  // If the player won't collide with anything, move them.
   if (collision.tileID === 0 && (!eventObject || !eventObject.doesCollide)) {
     movePlayer(state, nextPosition);
   }
 
-  // console.log('velocity', velocity);
-  // console.log('collision', collision);
-  // console.log('eventObject', eventObject);
-  // movePlayer(state, action);
+  // Trigger any event they touched.
+  if (eventObject) {
+    triggerEvent(state, eventObject);
+  }
 }
