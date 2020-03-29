@@ -1,9 +1,9 @@
 
 export const LAYER = {
+  FLOOR: 'floor',
+  COLLISION: 'collision',
   SKY: 'sky',
   EVENTS: 'events',
-  COLLISION: 'collision',
-  FLOOR: 'floor',
 };
 
 export const EVENT_TYPE = {

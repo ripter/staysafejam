@@ -11,17 +11,23 @@ import { LAYER, EVENT_TYPE, EVENT_NAME } from '../consts/tiledMap';
 */
 export function loadEvents(state, {stage, resources}) {
   const tiles = resources.tilesheet;
-  // get the events layer, it holds the spawn points.
-  const { objects } = state.level.find(i => i.type === 'objectgroup' && i.name === LAYER.EVENTS);
-  // Get all the spawn points so we can spawn mobs there!
-  const spawnPoints = objects.filter(i => i.type === EVENT_TYPE.SPAWN);
-
-  //
   // Create a layer to hold all of the mobs
   createContainer(state, 'mobLayer');
+  // get the events layer, it holds the spawn points.
+  const { objects } = state.level.find(i => i.type === 'objectgroup' && i.name === LAYER.EVENTS);
+
+  //
+  // Put custom properties directly on the object.
+  objects.forEach(i => {
+    if (!Array.isArray(i.properties)) { return; }
+    i.properties.forEach(p => i[p.name] = p.value);
+    delete i.properties;
+  });
+
 
   //
   // Now spawn everyone!
+  const spawnPoints = objects.filter(i => i.type === EVENT_TYPE.SPAWN);
   spawnPoints.forEach((point) => {
     const { name, x, y } = point;
     const mobMeta = getRandomMob(name);

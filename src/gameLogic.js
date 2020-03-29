@@ -3,6 +3,7 @@ import { loadEvents } from './logic/loadEvents';
 import { loadTiledMap } from './logic/loadTiledMap';
 import { movePlayer } from './logic/movePlayer';
 import { createDialogUI } from './logic/createDialogUI';
+import { updateDialog } from './logic/updateDialog';
 
 import { ACTION } from './consts/action';
 
@@ -13,6 +14,9 @@ import { ACTION } from './consts/action';
 */
 export function gameLogic(state, action) {
   console.log('action', action);
+
+  // reset the dialog message.
+  updateDialog(state, {key: null, avatar: null});
 
   switch (action.type) {
     case ACTION.INIT:

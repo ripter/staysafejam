@@ -1,7 +1,9 @@
 import { ACTION } from '../consts/action';
+import { getObjectEventAt } from '../utils/getObjectEventAt';
 import { getTileAt } from '../utils/getTileAt';
 import { LAYER } from '../consts/tiledMap';
 import { spriteToGridPositon } from '../utils/convertPosition';
+import { updateDialog } from './updateDialog';
 
 // Moves the player in the world space.
 // mutates state.
@@ -10,6 +12,7 @@ export function movePlayer(state, {type, useBoost}) {
   const speed = useBoost ? 5 : 1;
   const vel = {x: 0, y: 0};
 
+  // Set velocity based on action type
   switch(type) {
     case ACTION.MOVE_NORTH:
       vel.y = -1;
@@ -37,9 +40,19 @@ export function movePlayer(state, {type, useBoost}) {
     layerName: LAYER.COLLISION,
   });
 
-  // 0 is empty, aka no collision
+  // if there is no collision (id 0)
+  // allow the player to move into the space.
   if (collision.tileID === 0) {
-    // Move the player by velocity
     player.position.copyFrom(newPosition);
+  }
+
+  // If the tile has an event, regardless of movement, trigger it.
+  // Events are triggered by attempting to move into them.
+  const eventObject = getObjectEventAt(state, newPosition);
+  if (eventObject) {
+    updateDialog(state, {
+      key: eventObject.name,
+      avatar: eventObject.avatar,
+    });
   }
 }
