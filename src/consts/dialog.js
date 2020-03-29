@@ -1,4 +1,4 @@
-// import { ACTION } from './action';
+import { ACTION } from './action';
 
 
 export const WIDTH = 50;
@@ -31,13 +31,19 @@ export const DIALOG = {
     onConfirm: 'REWARD_FARMER',
   },
 
+
   found_fancy_ring: {
     pages: [
       'I found a very fancy ring',
       'Is that the Royal Crest?',
       'Should I keep it?',
     ],
-    onConfirm: 'PICKUP_FANCY_RING',
-    onCancel: 'DROP_FANCY_RING',
+    onConfirm: ACTION.PICKUP_FANCY_RING,
+    onCancel: ACTION.DROP_FANCY_RING,
   },
+  take_fancy_ring: {
+    pages: [
+      '[You picked up the fancy ring.]',
+    ],
+  }
 };

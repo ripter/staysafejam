@@ -7,4 +7,9 @@ export const ACTION = {
   CONFIRM: 'CONFIRM',
   CANCEL: 'CANCEL',
   ANY_KEY: 'ANY_KEY',
+  DIALOG: 'DIALOG',
+
+  // Gameplay Actions
+  DROP_FANCY_RING: 'DROP_FANCY_RING',
+  PICKUP_FANCY_RING: 'PICKUP_FANCY_RING',
 };

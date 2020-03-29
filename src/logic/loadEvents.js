@@ -10,6 +10,7 @@ import { EVENT_NAME, EVENT_TYPE, LAYER } from '../consts/tiledMap';
 export function loadEvents(state) {
   // Create a layer to hold all of the mobs
   createContainer(state, 'mobLayer');
+  state.mobLayer.sortableChildren = true;
   // get the events layer, it holds the spawn points.
   const { objects } = state.level.find((i) => i.type === 'objectgroup' && i.name === LAYER.EVENTS);
 
@@ -39,4 +40,5 @@ export function loadEvents(state) {
 
   // Save a refrence to the player
   state.player = state.mobLayer.getChildByName(EVENT_NAME.PLAYER);
+  state.player.zIndex = 10;
 }

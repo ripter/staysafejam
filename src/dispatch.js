@@ -11,6 +11,8 @@ const state = {
   currentAvatar: null,
   currentChoice: 0,
   pendingActions: [],
+  /* Gameplay State */
+  hasFancyRing: false,
 };
 // put state on the window for easy debugging.
 window.gameState = state;

@@ -1,9 +1,11 @@
 import { createChoiceUI } from './logic/createChoiceUI';
 import { createDialogUI } from './logic/createDialogUI';
 import { createSolidaryUI } from './logic/createSolidaryUI';
+import { dropFancyRing } from './logic/dropFancyRing';
 import { loadAssets } from './logic/loadAssets';
 import { loadEvents } from './logic/loadEvents';
 import { loadTiledMap } from './logic/loadTiledMap';
+import { pickupFancyRing } from './logic/pickupFancyRing';
 import { updateChoice } from './logic/updateChoice';
 import { updateDialog } from './logic/updateDialog';
 import { updateMap } from './logic/updateMap';
@@ -28,6 +30,13 @@ export function gameLogic(state, action) {
       createSolidaryUI(state);
       createChoiceUI(state);
       break;
+    case ACTION.DIALOG:
+      state.focus = FOCUS.DIALOG;
+      state.currentDialogKey = action.key;
+      updateDialog(state, action);
+      break;
+    /*
+     * UI Actions */
     case ACTION.ANY_KEY:
     case ACTION.CONFIRM:
     case ACTION.CANCEL:
@@ -44,6 +53,14 @@ export function gameLogic(state, action) {
       else {
         updateMap(state, action);
       }
+      break;
+    /*
+     * Game Play Action */
+    case ACTION.DROP_FANCY_RING:
+      dropFancyRing(state, action);
+      break;
+    case ACTION.PICKUP_FANCY_RING:
+      pickupFancyRing(state, action);
       break;
     default:
       console.log('unknown action', action);
