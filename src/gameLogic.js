@@ -28,6 +28,7 @@ export function gameLogic(state, action) {
       createSolidaryUI(state);
       createChoiceUI(state);
       break;
+    case ACTION.ANY_KEY:
     case ACTION.CONFIRM:
     case ACTION.CANCEL:
     case ACTION.MOVE_NORTH:

@@ -1,3 +1,4 @@
+import { ACTION } from '../consts/action';
 import { closeDialog } from './closeDialog';
 import { DIALOG } from '../consts/dialog';
 import { FOCUS } from '../consts/options';
@@ -27,6 +28,9 @@ export function updateDialog(state, action) {
   }
   else if (isLastPage && haveChoices) {
     state.focus = FOCUS.CHOICE;
+    state.pendingActions.push({
+      type: ACTION.ANY_KEY,
+    });
   }
 
   // Display/clear the dialog.
