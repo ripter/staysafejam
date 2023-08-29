@@ -1,4 +1,4 @@
-import * as PIXI from 'pixi.js';
+import { Text} from 'pixi.js';
 
 import { createContainer } from '../utils/createContainer';
 import { createSpriteFromTileID } from '../utils/createSpriteFromTileID';
@@ -19,7 +19,7 @@ export function createChoiceUI(state) {
   icon.tint = TINT;
   state.choiceLayer.addChild(icon);
 
-  const confirm = new PIXI.Text('Yes', {
+  const confirm = new Text('Yes', {
     fontFamily: 'monospace',
     fontSize: 24,
     lineHeight: 24 * 1.4,
@@ -30,7 +30,7 @@ export function createChoiceUI(state) {
   confirm.x = tileWidth * 2;
   state.choiceLayer.addChild(confirm);
 
-  const cancel = new PIXI.Text('No', {
+  const cancel = new Text('No', {
     fontFamily: 'monospace',
     fontSize: 24,
     lineHeight: 24 * 1.4,

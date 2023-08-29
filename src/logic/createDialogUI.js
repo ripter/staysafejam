@@ -1,4 +1,4 @@
-import * as PIXI from 'pixi.js';
+import { Text } from 'pixi.js';
 
 import { createContainer } from '../utils/createContainer';
 import { createSpriteFromTileID } from '../utils/createSpriteFromTileID';
@@ -49,7 +49,7 @@ export function createDialogUI(state) {
 
   //
   // Add The text
-  const message = new PIXI.Text('#StaySafeJam @ripter001 (Twitter)\nTheme: Solidary (March 2020)', {
+  const message = new Text('#StaySafeJam @ripter001 (Twitter)\nTheme: Solidary (March 2020)', {
     fontFamily: 'monospace',
     fontSize: 24,
     lineHeight: 24 * 1.4,

@@ -5,7 +5,6 @@ module.exports = {
     mocha: true,
   },
   extends: [
-    'airbnb-base',
   ],
   globals: {
   },

@@ -1,4 +1,4 @@
-import * as PIXI from 'pixi.js';
+import { Application, Assets } from 'pixi.js';
 
 import { ACTION } from './consts/action';
 import { dispatch } from './dispatch';
@@ -12,23 +12,19 @@ const HEIGHT = 576;
 const RESOLUTION = 1;
 
 // Create a Pixi Application
-const app = window.app = new PIXI.Application({ width: WIDTH, height: HEIGHT, resolution: RESOLUTION });
+const app = window.app = new Application({ width: WIDTH, height: HEIGHT, resolution: RESOLUTION });
 // Add the canvas that Pixi automatically created for you to the HTML document
 window.elRoot.appendChild(app.view);
 
-
 // Load our assets
-PIXI.Loader.shared
-  .add('tilesheet', 'assets/colored.json')
-  .load((loader, resources) => {
-    // Once all the async resources are loaded,
-    // dispatch the init action to start the game.
-    dispatch({
-      type: ACTION.INIT,
-      resources,
-      tiledMap: level,
-      app,
-    });
-    // Start listening for player input
-    startWASD();
-  });
+const assTilesheet = await Assets.load('assets/colored.json');
+console.log('assets', assTilesheet)
+dispatch({
+  type: ACTION.INIT,
+  resources: { tilesheet: assTilesheet },
+  tiledMap: level,
+  app,
+});
+
+// Start listening for player input
+startWASD();
